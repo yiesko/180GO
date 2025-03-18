@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NASSAU-18"
+rootProject.name = "180 GO"
 include ':app'
