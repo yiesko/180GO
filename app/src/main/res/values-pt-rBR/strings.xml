@@ -14,6 +14,7 @@
     <string name="about_fragment_tech_language">Java - Linguagem principal do projeto</string>
     <string name="about_fragment_tech_constraint">ConstraintLayout - Gerenciamento flexível de layouts</string>
     <string name="about_fragment_view_source">Código-Fonte no GitHub</string>
+    <string name="about_fragment_view_source_browser_not_found">Nenhum navegador instalado</string>
 
     <!-- Calc Fragment -->
     <string name="calc_fragment">Cálculo</string>
