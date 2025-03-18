@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name" translatable="false">180 GO</string>
+
+    <!-- About Fragment -->
+    <string name="about_fragment">About</string>
+    <string name="about_fragment_title">Sobre o Projeto</string>
+    <string name="about_fragment_version">Versão %1$s</string>
+    <string name="about_fragment_version_unknown">Versão desconhecida</string>
+    <string name="about_fragment_project_title">Sobre o 180 GO</string>
+    <string name="about_fragment_project_description">Aplicativo desenvolvido para cálculo de tarifas de transporte utilizando funções multivariadas, criado como parte das atividades da disciplina de Matemática Aplicada.\n\nNão possui qualquer vínculo com aplicativos comerciais de transporte.</string>
+    <string name="about_fragment_tech_title">Tecnologias utilizadas</string>
+    <string name="about_fragment_tech_android">AndroidX - Desenvolvimento nativo com bibliotecas modernas do Android</string>
+    <string name="about_fragment_tech_material">Material You - Componentes Material para design de UI</string>
+    <string name="about_fragment_tech_language">Java - Linguagem principal do projeto</string>
+    <string name="about_fragment_tech_constraint">ConstraintLayout - Gerenciamento flexível de layouts</string>
+    <string name="about_fragment_view_source">Código-Fonte no GitHub</string>
+
+    <!-- Calc Fragment -->
+    <string name="calc_fragment">Cálculo</string>
+    <string name="calc_fragment_km_hint">Quilômetros</string>
+    <string name="calc_fragment_time_hint">Tempo (minutos)</string>
+    <string name="calc_fragment_calculate">Calcular</string>
+    <string name="calc_fragment_base_fare_hint">Tarifa base</string>
+    <string name="calc_fragment_km_rate_hint">Taxa por km</string>
+    <string name="calc_fragment_time_rate_hint">Taxa por minuto</string>
+    <string name="calc_fragment_result_hint">Preço total</string>
+    <string name="calc_fragment_input_error">Valores inválidos!</string>
+
+    <!-- Home Fragment -->
+    <string name="home_fragment">Início</string>
+    <string name="menu_calc">Função</string>
+    <string name="menu_about">Sobre</string>
+
+    <!-- Splash Fragment -->
+    <string name="splash_fragment">Splash</string>
+    <string name="splash_warning_about_app_title">É imprescindível atentar-se às informações a seguir</string>
+    <string name="splash_warning_about_app_message">O aplicativo em questão é oriundo de uma atividade proposta no âmbito da disciplina \"Matemática Aplicada\". Não se pretende, com a criação deste aplicativo, que seja feita uma cópia ou distribuição indevida do aplicativo \"99\" ou de qualquer outro com proposta similar.</string>
+</resources>

@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name" translatable="false">180 GO</string>
+
+    <!-- About Fragment -->
+    <string name="about_fragment">About</string>
+    <string name="about_fragment_title">About the Project</string>
+    <string name="about_fragment_version">Version %1$s</string>
+    <string name="about_fragment_version_unknown">Unknown version</string>
+    <string name="about_fragment_project_title">About 180 GO</string>
+    <string name="about_fragment_project_description">An application developed to calculate transportation fares using multivariate functions, created as part of the "Applied Mathematics" course activities.\n\nIt has no affiliation with commercial transportation apps.</string>
+    <string name="about_fragment_tech_title">Technologies used</string>
+    <string name="about_fragment_tech_android">AndroidX - Native development with modern Android libraries</string>
+    <string name="about_fragment_tech_material">Material You - Material Components for UI design</string>
+    <string name="about_fragment_tech_language">Java - Core programming language</string>
+    <string name="about_fragment_tech_constraint">ConstraintLayout - Flexible layout management</string>
+    <string name="about_fragment_view_source">View Source on GitHub</string>
+
+    <!-- Calc Fragment -->
+    <string name="calc_fragment">Calc</string>
+    <string name="calc_fragment_km_hint">Kilometers</string>
+    <string name="calc_fragment_time_hint">Time (minutes)</string>
+    <string name="calc_fragment_calculate">Calculate</string>
+    <string name="calc_fragment_base_fare_hint">Base fare</string>
+    <string name="calc_fragment_km_rate_hint">Rate per km</string>
+    <string name="calc_fragment_time_rate_hint">Rate per minute</string>
+    <string name="calc_fragment_result_hint">Total price</string>
+    <string name="calc_fragment_input_error">Invalid values!</string>
+    <string name="calc_fragment_default_km" translatable="false">10</string>
+    <string name="calc_fragment_default_time" translatable="false">15</string>
+    <string name="calc_fragment_default_base" translatable="false">5</string>
+    <string name="calc_fragment_currency_format" translatable="false">R$ %.2f</string>
+
+    <!-- Home Fragment -->
+    <string name="home_fragment">Home</string>
+    <string name="menu_calc">Function</string>
+    <string name="menu_about">About</string>
+
+    <!-- Splash Fragment -->
+    <string name="splash_fragment">Splash</string>
+    <string name="splash_warning_about_app_title">Please note the following information</string>
+    <string name="splash_warning_about_app_message">The app in question is the result of an activity proposed as part of the subject “Applied Mathematics”. The creation of this app is not intended to unduly copy or distribute the “99” app or any other app with a similar purpose.</string>
+</resources>
