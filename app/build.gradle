@@ -3,24 +3,42 @@ plugins {
 }
 
 android {
-    namespace 'xq.yiesko.app180go'
-    compileSdk 36
-    buildToolsVersion '36.0.0'
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    namespace rootProject.ext.namespace
+    compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
-        applicationId "xq.yiesko.app180go"
-        minSdk 28
-        targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.appId
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        vectorDrawables.useSupportLibrary true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(rootProject.ext.jksPath)
+            storePassword rootProject.ext.jksPassword
+            keyAlias rootProject.ext.jksAlias
+            keyPassword rootProject.ext.jksKeyPassword
+            enableV1Signing true
+            enableV2Signing true
+            enableV3Signing true
+            enableV4Signing true
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            debuggable false
+            shrinkResources true
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17

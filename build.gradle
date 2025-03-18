@@ -1,3 +1,27 @@
+buildscript {
+    def keystoreFile = file("keystore.properties")
+    def keystoreProperties = new Properties()
+
+    if (keystoreFile.exists()) {
+        keystoreFile.withInputStream { keystoreProperties.load(it) }
+    }
+
+    ext {
+        buildToolsVersion = "36.0.0"
+        namespace = "xq.yiesko.app180go"
+        compileSdk = 36
+        appId = namespace
+        minSdk = 28
+        targetSdk = compileSdk
+        versionCode = 1
+        versionName = "1.0"
+        jksPath = keystoreProperties.getProperty("jksPath", "")
+        jksPassword = keystoreProperties.getProperty("jksPassword", "")
+        jksAlias = keystoreProperties.getProperty("jksAlias", "")
+        jksKeyPassword = keystoreProperties.getProperty("jksKeyPassword", "")
+    }
+}
+
 plugins {
     alias(libs.plugins.android.application) apply false
 }
