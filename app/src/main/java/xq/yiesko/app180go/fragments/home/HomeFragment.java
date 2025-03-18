@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.google.android.material.transition.platform.MaterialSharedAxis;
 
 import xq.yiesko.app180go.databinding.FragmentHomeBinding;
 import xq.yiesko.app180go.fragments.home.adapter.ViewPagerAdapter;
@@ -17,6 +18,13 @@ import xq.yiesko.app180go.fragments.home.adapter.ViewPagerAdapter;
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding fragmentHomeBinding;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
+        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
+    }
 
     @Nullable
     @Override

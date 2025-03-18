@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.transition.platform.MaterialSharedAxis;
 
 import xq.yiesko.app180go.R;
 import xq.yiesko.app180go.databinding.FragmentSplashBinding;
@@ -20,6 +21,13 @@ import xq.yiesko.app180go.databinding.FragmentSplashBinding;
 public class SplashFragment extends Fragment {
 
     private FragmentSplashBinding fragmentSplashBinding;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
+        setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
+    }
 
     @Nullable
     @Override

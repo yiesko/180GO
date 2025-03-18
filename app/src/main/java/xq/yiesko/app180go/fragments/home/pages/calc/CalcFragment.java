@@ -12,9 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.transition.TransitionManager;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.transition.MaterialFade;
 
 import java.util.Locale;
 
@@ -131,6 +133,7 @@ public class CalcFragment extends Fragment {
         viewModel.getResult().observe(getViewLifecycleOwner(), result -> {
             if (result != null) {
                 if (binding.fragmentCalcCardResult.getVisibility() != View.VISIBLE) {
+                    TransitionManager.beginDelayedTransition((ViewGroup) binding.fragmentCalcCardResult.getParent(), new MaterialFade());
                     binding.fragmentCalcCardResult.setVisibility(View.VISIBLE);
                 }
 
