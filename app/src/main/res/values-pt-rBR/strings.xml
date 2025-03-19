@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">180 GO</string>
 
     <!-- About Fragment -->
-    <string name="about_fragment">About</string>
+    <string name="about_fragment">Sobre</string>
     <string name="about_fragment_title">Sobre o Projeto</string>
     <string name="about_fragment_version">Versão %1$s</string>
     <string name="about_fragment_version_unknown">Versão desconhecida</string>
