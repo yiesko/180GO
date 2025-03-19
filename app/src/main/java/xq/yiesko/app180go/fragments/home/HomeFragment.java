@@ -20,7 +20,9 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding fragmentHomeBinding;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(
+            @Nullable Bundle savedInstanceState
+    ) {
         super.onCreate(savedInstanceState);
         setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
         setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
@@ -38,7 +40,10 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(
+            @NonNull View view,
+            @Nullable Bundle savedInstanceState
+    ) {
         super.onViewCreated(view, savedInstanceState);
 
         var tabLayout = fragmentHomeBinding.fragmentHomeTabs;

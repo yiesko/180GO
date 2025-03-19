@@ -4,7 +4,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
 
-    <!-- Splash Fragment -->
     <fragment
         android:id="@+id/splashFragment"
         android:name="xq.yiesko.app180go.fragments.splash.SplashFragment"
@@ -14,7 +13,6 @@
             app:destination="@id/home_navigation" />
     </fragment>
 
-    <!-- Nested Navigation for Home -->
     <navigation
         android:id="@+id/home_navigation"
         app:startDestination="@id/homeFragment">

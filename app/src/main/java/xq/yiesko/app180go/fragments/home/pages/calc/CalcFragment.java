@@ -28,15 +28,23 @@ public class CalcFragment extends Fragment {
     private FragmentCalcBinding binding;
     private CalcViewModel viewModel;
 
+    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(
+            @NonNull LayoutInflater inflater,
+            @Nullable ViewGroup container,
+            @Nullable Bundle savedInstanceState
+    ) {
         binding = FragmentCalcBinding.inflate(inflater, container, false);
         viewModel = new ViewModelProvider(this).get(CalcViewModel.class);
         return binding.getRoot();
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(
+            @NonNull View view,
+            @Nullable Bundle savedInstanceState
+    ) {
         super.onViewCreated(view, savedInstanceState);
 
         setupDefaults();

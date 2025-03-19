@@ -23,7 +23,9 @@ public class SplashFragment extends Fragment {
     private FragmentSplashBinding fragmentSplashBinding;
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(
+            @Nullable Bundle savedInstanceState
+    ) {
         super.onCreate(savedInstanceState);
         setEnterTransition(new MaterialSharedAxis(MaterialSharedAxis.Y, true));
         setExitTransition(new MaterialSharedAxis(MaterialSharedAxis.X, true));
