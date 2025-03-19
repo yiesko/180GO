@@ -31,11 +31,6 @@
     <string name="calc_fragment_default_base" translatable="false">5</string>
     <string name="calc_fragment_currency_format" translatable="false">R$ %.2f</string>
 
-    <!-- Home Fragment -->
-    <string name="home_fragment">Home</string>
-    <string name="menu_calc">Function</string>
-    <string name="menu_about">About</string>
-
     <!-- Splash Fragment -->
     <string name="splash_fragment">Splash</string>
     <string name="splash_warning_about_app_title">Please note the following information</string>

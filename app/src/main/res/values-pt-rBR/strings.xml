@@ -27,11 +27,6 @@
     <string name="calc_fragment_result_hint">Preço total</string>
     <string name="calc_fragment_input_error">Valores inválidos!</string>
 
-    <!-- Home Fragment -->
-    <string name="home_fragment">Início</string>
-    <string name="menu_calc">Função</string>
-    <string name="menu_about">Sobre</string>
-
     <!-- Splash Fragment -->
     <string name="splash_fragment">Splash</string>
     <string name="splash_warning_about_app_title">É imprescindível atentar-se às informações a seguir</string>
