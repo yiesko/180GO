@@ -88,15 +88,24 @@ keytool -genkey -v -keystore minha-chave.jks -keyalg RSA -keysize 2048 -validity
 
 ---
 
-## 6. Como contribuir
+## 6. Comparação de Tarifas
+O aplicativo foi ajustado na atualização 1.1.0 para oferecer tarifas competitivas em relação a Uber e 99. Veja a tabela abaixo com exemplos reais (valores estimados para abril de 2025):
+
+| **Rota**                             | **Distância (km)** | **Tempo (min)** | **180GO Original (R$)** | **Uber (R$)** | **99 (R$)** | **180GO Ajustado e sem Desconto (R$)** | **180GO Ajustado e com Desconto de 5% (R$)** |
+|--------------------------------------|--------------------|-----------------|-------------------------|---------------|-------------|----------------------------------------|----------------------------------------------|
+| UNINASSAU - Jóquei, Av. Jóquei Clube | 8,5                | 18              | 31,00                   | 28,20         | 24,50       | 24,05                                  | 22,85                                        |
+
+---
+
+## 7. Como contribuir
 
 1. Faça um **fork** do projeto
 2. Crie uma branch:  
    `git checkout -b feat/nova-feature`
 3. Siga as recomendações:
-   - Nomes de recursos em inglês (e traduza as strings para inglês)
-   - Padrão `fragment_[nome]_[elemento]` para IDs
-   - Commits semânticos e assinados
+    - Nomes de recursos em inglês (e traduza as strings para inglês)
+    - Padrão `fragment_[nome]_[elemento]` para IDs
+    - Commits semânticos e assinados
 4. Abra um **Pull Request** (PR)
 
 **Diretrizes:**
