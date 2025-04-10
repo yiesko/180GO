@@ -6,8 +6,9 @@ import androidx.lifecycle.ViewModel;
 
 public class CalcViewModel extends ViewModel {
     private final MutableLiveData<Double> baseFare = new MutableLiveData<>(5.0);
-    private final MutableLiveData<Double> kmRate = new MutableLiveData<>(2.0);
-    private final MutableLiveData<Double> timeRate = new MutableLiveData<>(0.5);
+    private final MutableLiveData<Double> kmRate = new MutableLiveData<>(1.5);
+    private final MutableLiveData<Double> timeRate = new MutableLiveData<>(0.35);
+    private final MutableLiveData<Double> discountRate = new MutableLiveData<>(5.0);
     private final MutableLiveData<Double> result = new MutableLiveData<>();
 
     public void calculate(
@@ -19,12 +20,16 @@ public class CalcViewModel extends ViewModel {
                 ? baseFare.getValue() : 5.0;
         var kmR = kmRate.getValue()
                 != null
-                ? kmRate.getValue() : 2.0;
+                ? kmRate.getValue() : 1.5;
         var timeR = timeRate.getValue()
                 != null
-                ? timeRate.getValue() : 0.5;
+                ? timeRate.getValue() : 0.35;
+        var discount = discountRate.getValue()
+                != null
+                ? discountRate.getValue() : 5.0;
 
-        var total = base + (km * kmR) + (minutes * timeR);
+        var subtotal = base + (km * kmR) + (minutes * timeR);
+        var total = subtotal * (1 - discount / 100);
 
         result.setValue(total);
     }
@@ -49,5 +54,11 @@ public class CalcViewModel extends ViewModel {
             double value
     ) {
         timeRate.setValue(value);
+    }
+
+    public void setDiscountRate(
+            double value
+    ) {
+        discountRate.setValue(value);
     }
 }

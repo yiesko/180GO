@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:hint="@string/calc_fragment_base_fare_hint"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_btn_calculate"
+        app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_discount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_time"
@@ -61,6 +61,26 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_calc_input_discount"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/calc_fragment_discount_hint"
+        app:layout_constraintBottom_toTopOf="@id/fragment_calc_btn_calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_base"
+        app:startIconDrawable="@drawable/ic_discount">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_calc_edit_discount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
@@ -77,7 +97,7 @@
         app:layout_constraintBottom_toTopOf="@id/fragment_calc_card_result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_base" />
+        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_discount" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/fragment_calc_card_result"

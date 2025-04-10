@@ -29,6 +29,8 @@
     <string name="calc_fragment_default_km" translatable="false">10</string>
     <string name="calc_fragment_default_time" translatable="false">15</string>
     <string name="calc_fragment_default_base" translatable="false">5</string>
+    <string name="calc_fragment_discount_hint">Discount (%)</string>
+    <string name="calc_fragment_default_discount" translatable="false">5</string>
     <string name="calc_fragment_currency_format" translatable="false">R$ %.2f</string>
 
     <!-- Splash Fragment -->

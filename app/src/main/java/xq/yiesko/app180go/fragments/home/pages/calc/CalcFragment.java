@@ -57,10 +57,12 @@ public class CalcFragment extends Fragment {
         binding.fragmentCalcEditKm.setText(getString(R.string.calc_fragment_default_km));
         binding.editBase.setText(getString(R.string.calc_fragment_default_base));
         binding.fragmentCalcEditTime.setText(getString(R.string.calc_fragment_default_time));
+        binding.fragmentCalcEditDiscount.setText(getString(R.string.calc_fragment_default_discount));
 
         viewModel.setBaseFare(5.0);
-        viewModel.setKmRate(2.0);
-        viewModel.setTimeRate(0.5);
+        viewModel.setKmRate(1.5);
+        viewModel.setTimeRate(0.35);
+        viewModel.setDiscountRate(5.0);
     }
 
     private void setupValidation() {
@@ -88,12 +90,14 @@ public class CalcFragment extends Fragment {
         binding.fragmentCalcEditKm.addTextChangedListener(validator);
         binding.fragmentCalcEditTime.addTextChangedListener(validator);
         binding.editBase.addTextChangedListener(validator);
+        binding.fragmentCalcEditDiscount.addTextChangedListener(validator);
     }
 
     private void validateFields() {
         var isValid = isFieldValid(binding.fragmentCalcEditKm) &&
                 isFieldValid(binding.fragmentCalcEditTime) &&
-                isFieldValid(binding.editBase);
+                isFieldValid(binding.editBase) &&
+                isFieldValid(binding.fragmentCalcEditDiscount);
 
         binding.fragmentCalcBtnCalculate.setEnabled(isValid);
     }
@@ -122,12 +126,17 @@ public class CalcFragment extends Fragment {
                 var baseText = binding.editBase.getText()
                         != null
                         ? binding.editBase.getText().toString() : "0";
+                var discountText = binding.fragmentCalcEditDiscount.getText()
+                        != null
+                        ? binding.fragmentCalcEditDiscount.getText().toString() : "0";
 
                 var km = Double.parseDouble(kmText);
                 var time = Double.parseDouble(timeText);
                 var base = Double.parseDouble(baseText);
+                var discount = Double.parseDouble(discountText);
 
                 viewModel.setBaseFare(base);
+                viewModel.setDiscountRate(discount);
                 viewModel.calculate(km, time);
             } catch (NumberFormatException e) {
                 Snackbar.make(binding.getRoot(),

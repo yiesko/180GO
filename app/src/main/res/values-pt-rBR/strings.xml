@@ -26,6 +26,7 @@
     <string name="calc_fragment_time_rate_hint">Taxa por minuto</string>
     <string name="calc_fragment_result_hint">Preço total</string>
     <string name="calc_fragment_input_error">Valores inválidos!</string>
+    <string name="calc_fragment_discount_hint">Desconto (%)</string>
 
     <!-- Splash Fragment -->
     <string name="splash_fragment">Splash</string>
