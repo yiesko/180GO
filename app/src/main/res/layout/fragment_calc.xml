@@ -1,125 +1,140 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp">
+    android:fillViewport="true">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_calc_input_km"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/calc_fragment_km_hint"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:startIconDrawable="@drawable/ic_distance">
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fragment_calc_edit_km"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:padding="32dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_calc_input_time"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/calc_fragment_time_hint"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_base"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_km"
-        app:startIconDrawable="@drawable/ic_timer">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_calc_input_km"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/calc_fragment_km_hint"
+                app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_time"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:startIconDrawable="@drawable/ic_distance">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fragment_calc_edit_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fragment_calc_edit_km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_calc_input_base"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/calc_fragment_base_fare_hint"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_discount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_time"
-        app:startIconDrawable="@drawable/ic_attach_money">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_calc_input_time"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/calc_fragment_time_hint"
+                app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_base"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_km"
+                app:startIconDrawable="@drawable/ic_timer">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edit_base"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fragment_calc_edit_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/fragment_calc_input_discount"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:hint="@string/calc_fragment_discount_hint"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_btn_calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_base"
-        app:startIconDrawable="@drawable/ic_discount">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_calc_input_base"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/calc_fragment_base_fare_hint"
+                app:layout_constraintBottom_toTopOf="@id/fragment_calc_input_discount"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_time"
+                app:startIconDrawable="@drawable/ic_attach_money">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/fragment_calc_edit_discount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/fragment_calc_btn_calculate"
-        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/calc_fragment_calculate"
-        app:icon="@drawable/ic_menu_calc_outline"
-        app:layout_constraintBottom_toTopOf="@id/fragment_calc_card_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_discount" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragment_calc_input_discount"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/calc_fragment_discount_hint"
+                app:layout_constraintBottom_toTopOf="@id/fragment_calc_btn_calculate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_base"
+                app:startIconDrawable="@drawable/ic_discount">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/fragment_calc_card_result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fragment_calc_btn_calculate"
-        app:strokeColor="?attr/colorOutline"
-        app:strokeWidth="1dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fragment_calc_edit_discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/fragment_calc_result_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="16dp"
-            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
-            tools:text="R$ 50,00" />
-    </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_calc_btn_calculate"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/calc_fragment_calculate"
+                app:icon="@drawable/ic_menu_calc_outline"
+                app:layout_constraintBottom_toTopOf="@id/fragment_calc_card_result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_calc_input_discount" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fragment_calc_card_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fragment_calc_btn_calculate"
+                app:strokeColor="?attr/colorOutline"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/fragment_calc_result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+                    tools:text="R$ 50,00" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
