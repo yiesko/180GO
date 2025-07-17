@@ -3,7 +3,7 @@ agp = "8.11.0-alpha05"
 appcompat = "1.7.0"
 material = "1.14.0-alpha01"
 constraintlayout = "2.2.1"
-navigationFragment = "2.9.0"
+navigationFragment = "2.9.2"
 navigationUi = "2.9.0"
 
 [libraries]
